@@ -8,3 +8,9 @@ init:
 
 generate:
 	go generate ./...
+
+run: generate
+	@go run cmd/main.go
+
+test: generate
+	go test ./... -v

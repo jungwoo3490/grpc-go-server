@@ -11,6 +11,7 @@ import (
 )
 
 type TodoHandler struct {
+	grpcapi.UnimplementedTodoServiceServer
 	mu    sync.Mutex
 	todos map[string]*grpcapi.Todo
 	seq   int
